@@ -12,7 +12,8 @@ import javax.persistence.Id;
 @Getter
 @Setter
 public class ChatUser {
+
     @Id
     private Long chatId;
-    private boolean isAllReleasesToShow;
+    private String username;
 }

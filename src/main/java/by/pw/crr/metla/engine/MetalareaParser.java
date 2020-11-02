@@ -9,23 +9,29 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MetalareaParser {
+public enum MetalareaParser {
+    INSTANCE;
 
 
 
-//
-//    public Document parseReleases() {
-//        Document document = null;
-//        try {
-//            document = Jsoup.connect("http://metalarea.org/forum/index.php?act=SF&f=2&st=0&changefilters=1")
-//                    .userAgent("Chrome/81.0.4044.138")
-//                    .referrer("http://www.google.com")
-//                    .get();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        return document;
-//    }
+    public List<MetalareaRelease> parseReleases() {
+        List<MetalareaRelease> parsedReleases = new ArrayList<>();
+        Document document = null;
+        try {
+            document = Jsoup.connect("http://metalarea.org/forum/index.php?act=SF&f=2&st=0&changefilters=1")
+                    .userAgent("Chrome/81.0.4044.138")
+                    .referrer("http://www.google.com")
+                    .get();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        //todo parsing logics
+
+
+
+        return parsedReleases;
+    }
 //
 //    public List<MetalareaRelease> getNewReleases(Document document) {
 //        List<MetalareaRelease> newReleases = new ArrayList<>();

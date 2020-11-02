@@ -6,6 +6,7 @@ import javax.persistence.criteria.CriteriaQuery;
 import java.util.List;
 
 public abstract class GenericDAOImpl<T, ID> implements GenericDAO<T, ID> {
+
     private final EntityManager em = Persistence.createEntityManagerFactory("tg-bot").createEntityManager();
     private final Class<T> entityClass;
 
