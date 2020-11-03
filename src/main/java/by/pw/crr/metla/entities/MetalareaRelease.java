@@ -23,6 +23,15 @@ public class MetalareaRelease {
     private String releaseLink;
     private boolean isSent;
 
+    public MetalareaRelease(String releaseDescription, String link, String genreDescription) {
+        bandName = ;
+        albumTitle = ;
+        albumYear = ;
+        bandGenre = genreDescription.trim();
+        releaseLink = link.trim();
+        isSent = false;
+    }
+
     @Override
     public String toString() {
         return "*Artist: *" + bandName + "\n" +
